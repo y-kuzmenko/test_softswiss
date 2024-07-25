@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Lato;
+  color: white;
+  
+  .header {
+    background-color: #000000;
+    height: 80px;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &_logo {
+      height: 16px;
+      cursor: pointer;
+    }  
+
+    .nav_link {
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+      margin-right: 70px;
+      color: white;
+    }
+
+    .nav_link:hover {
+      background: linear-gradient(98.25deg, #EBFF00 18.56%, #FF70D9 76.02%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.6;
+    }
+  }
+
+  .panel {
+    display: flex;
+    align-items: center;
+    height: 40vw;
+    min-height: 360px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(15, 20, 32, 0.79) 100%),
+    url(./assets/images/banner/EARTH_3.png) right bottom / contain no-repeat,
+    url(./assets/images/banner/banner_3.jpg) left top / cover no-repeat;
+
+    &_text {
+      padding-left: 80px;
+      width: 50vw;
+      font-weight: 800;
+
+      h1 {
+        font-size: 72px;
+
+        span {
+          color: #FF70D9;
+          ;
+        }
+      }
+
+      h3 {
+        font-size: 32px;
+        line-height: 2.5;
+
+        span {
+          color: #EBFF00;
+        }
+      }
+    }
+
+    .btn {
+      background-color: #EBFF00;
+      width: 191px;
+      height: 54px;
+      border-radius: 100px;
+
+      &_title {
+        font-family: Lato;
+        font-size: 22px;
+        font-weight: 700;
+      }
+    }
+
+    .btn:hover {
+      background: #EBFF0099;
+    }
+  }
+
+  .content {
+    background-image: linear-gradient(196.2deg, #0D1E48 0%, #304571 100%);
+
+    @media (min-width: 768px) {
+      &__blocks {
+        display: grid;
+        grid-template-areas:
+        "block1 block2"
+        "block3 block4";
+      }
+    }
+
+    @media (min-width: 1248px) {
+      &__title,
+      .description__title {
+        padding: 50px 80px 20px;
+        font-size: 32px;
+        font-weight: 800;
+      }
+
+      &__blocks {
+        padding: 0 60px;
+        display: grid;
+        grid-template-areas:
+        "block1 block1"
+        "block2 block3"
+        "block4 block4";
+      }
+
+      &__description {
+        padding-bottom: 40px;
+      }
+
+      .description__text {
+        padding: 0 80px 10px;
+        font-size: 20px;
+        font-weight: 800;
+        opacity: 0.6;
+      }
+
+      .description__read-more {
+        color: #EBFF00;
+        padding: 0 80px 10px;
+        font-size: 20px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+    }
+
+    &__block {
+      height: 30vw;
+      min-height: 350px;
+      border-radius: 10px;
+      margin: 20px;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.3s ease;
+
+      &--1 {
+        grid-area: block1;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(15, 20, 32, 0.79) 100%), url(./assets/images/block1/block1_3.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      &--2 {
+        grid-area: block2;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(15, 20, 32, 0.79) 100%), url(./assets/images/block2/block2_3.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      &--3 {
+        grid-area: block3;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(15, 20, 32, 0.79) 100%), url(./assets/images/block3/block3_3.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      &--4 {
+        grid-area: block4;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(15, 20, 32, 0.79) 100%), url(./assets/images/block4/block4_3.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
+
+
+  .footer {
+    background-color: #000000;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_logo {
+      width: 100px;
+    }
+
+    p {
+      color: #EBFF00;
+      font-size: 18px;
+      font-weight: 800;
+    }
+  }
+}
